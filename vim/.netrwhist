@@ -1,6 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/home/jeff/code/uwnav/src/osm'
-let g:netrw_dirhist_2='/home/jeff/code/uwnav/src/math'
-let g:netrw_dirhist_3='/home/jeff/code/uwnav/src/osm'
-let g:netrw_dirhist_4='/home/jeff/code/rearview/src/utils'
