@@ -65,6 +65,7 @@ syntax on
 
 " set colorscheme
 " colorscheme borland
+set t_Co=256
 
 " Always show the menu, insert longest match
 set completeopt=menuone,longest

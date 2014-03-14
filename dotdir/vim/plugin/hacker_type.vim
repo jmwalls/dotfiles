@@ -12,7 +12,7 @@ let loaded_hackerType = 1
 
 " map keys to hacker type
 if !hasmapto('<Plug>HackerType')
-    map <unique> <Leader>h <Plug>HackerType
+    map <silent> <unique> <Leader>h <Plug>HackerType
 endif
 noremap <unique> <script> <Plug>HackerType <SID>HackerType
 noremap <SID>HackerType :call <SID>HackerType()<CR>
