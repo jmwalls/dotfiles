@@ -19,10 +19,11 @@ set wildchar=<Tab>
 " show line numbers
 "set number
 
-" Fold using markers {{{
-" like this
-" }}}
-set foldmethod=marker
+"" Fold using markers {{{
+"" like this
+"" }}}
+"set foldmethod=marker
+"set foldmethod=syntax
 
 " enable all features
 set nocompatible
@@ -86,11 +87,12 @@ autocmd BufReadPost *
 set wildmode=longest,list,full
 set wildmenu
 
-" ctags
+" ctags locations
 set tags=./tags
 set tags+=~/.vim/tags/perls-tags
 set tags+=~/.vim/tags/perls-3rd-party-tags
 
+" ctags shortcuts
 :map <Leader>t :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 :map <Leader>v :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
@@ -119,8 +121,8 @@ vnoremap <silent> # :<C-U>
 :command Te tabe %:p:h
 :command E e %:p:h
 
-" set printer to scribble
-set printdevice=scribble
+"" set printer to scribble
+"set printdevice=scribble
 
 " plugins
 filetype plugin on

@@ -11,12 +11,13 @@ perls_3rd = 'perls-3rd-party-tags'
 perls_src = '~/perls/src/'
 lcm_src = '~/perls/third-party/build/lcm-*'
 bot_src = '~/perls/third-party/build/libbot2'
-sam_src = '~/perls/third-party/build/isam-*'
+sam_src = '~/perls/third-party/build/isam_dev'
 
 if __name__ == '__main__':
     # generate perls tags
     cmd = ' '.join ([ctags,
         perls_src])
+    print 'executing:', cmd
     os.system (cmd)
     os.rename ('tags', perls_tags)
 
@@ -25,6 +26,7 @@ if __name__ == '__main__':
         lcm_src,
         bot_src,
         sam_src])
+    print 'executing:', cmd
     os.system (cmd)
     os.rename ('tags', perls_3rd)
 
