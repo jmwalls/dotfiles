@@ -12,4 +12,3 @@ alias cdddd='cd ../../..'
 
 # matlab alias
 alias matlab='matlab -nosplash -nodesktop'
-
