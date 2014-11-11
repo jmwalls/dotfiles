@@ -1,27 +1,39 @@
 #!/usr/bin/env python
 import sys 
 import os
+import shutil
 
-HDIR = os.getenv ('HOME')
-CDIR = os.getcwd ()
-DDIR = os.path.join (CDIR, 'dotdir')
-ODIR = os.path.join (CDIR, 'olddir')
+HOMEDIR = os.getenv ('HOME')
+CURDIR = os.getcwd ()
+DOTDIR = os.path.join (CURDIR, 'dotdir')
+OLDDIR = os.path.join (CURDIR, 'olddotdir')
 
-dots = [f for f in os.listdir (DDIR)]
+AWEDIR = os.path.join (CURDIR, 'awesomedir')
+OLDAWEDIR = os.path.join (CURDIR, 'oldawesomedir')
+
+dots = [f for f in os.listdir (DOTDIR)]
 
 def install ():
     print 'installing dot files:'
-    if not os.path.exists (ODIR): os.mkdir (ODIR)
+    if not os.path.exists (OLDDIR): os.mkdir (OLDDIR)
     for dot in dots:
 	print '\t%s' % dot
-	src = os.path.join (DDIR, dot)
+	src = os.path.join (DOTDIR, dot)
 	dname = ''.join (['.',dot])
-	dest = os.path.join (HDIR, dname)
+	dest = os.path.join (HOMEDIR, dname)
 	if os.path.exists (dest):
-            cmd = ' '.join (['mv', dest, ODIR])
-            os.system (cmd)
+            shutil.move (dest, OLDDIR)
         cmd = ' '.join (['ln -sf', src, dest])
         os.system (cmd)
+
+    print 'installing awesome files'
+    if not os.path.exists (OLDAWEDIR): os.mkdir (OLDAWEDIR)
+    dest = os.path.join (HOMEDIR, '.config', 'awesome')
+    if os.path.exists (dest):
+        shutil.move (dest, OLDAWEDIR)
+    cmd = ' '.join (['ln -sf', AWEDIR, dest])
+    os.system (cmd)
+
     print 'installed'
 
 def uninstall ():
@@ -37,7 +49,7 @@ if __name__ == '__main__':
 
     if sys.argv[1]=='install':
         install ()
-    elif sys.argv[1]=='install':
+    elif sys.argv[1]=='uninstall':
         uninstall ()
     else:
         print_usage (sys.argv[0])
