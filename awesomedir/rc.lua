@@ -275,7 +275,12 @@ globalkeys = awful.util.table.join(
     -- jmw bindings
     awful.key({ modkey, "Shift"}, "g", function () 
         awful.util.spawn("chromium-browser") end),
-    awful.util.spawn_with_shell("xscreensaver -no-splash")
+    awful.key({ }, "XF86AudioRaiseVolume", function () 
+        awful.util.spawn("amixer -q sset Master 2+") end),
+    awful.key({ }, "XF86AudioLowerVolume", function () 
+        awful.util.spawn("amixer -q sset Master 2-") end),
+    awful.key({ }, "XF86AudioMute", function () 
+        awful.util.spawn("amixer -D pulse set Master 1+ toggle") end),
 
     -- standard bindings
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
@@ -426,6 +431,12 @@ awful.rules.rules = {
     --   properties = { tag = tags[1][2] } },
 }
 -- }}}
+
+-- {{{ Startup...
+
+awful.util.spawn_with_shell("xscreensaver -no-splash")
+
+--- }}}
 
 -- {{{ Signals
 -- Signal function to execute when a new client appears.
