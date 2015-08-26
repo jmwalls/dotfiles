@@ -1,5 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/home/jeff/literature/references'
-let g:netrw_dirhist_2='/home/jeff/code/uwnav/src/viewer'
-let g:netrw_dirhist_3='/home/jeff/code/uwnav/src/iver'
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/jeff/code/umbs072014/perls/src/iver/uwnav'
+let g:netrw_dirhist_2='/home/jeff/.ipython/profile_default'
+let g:netrw_dirhist_3='/home/jeff/code/umbs072014/perls/src/iver/uwnav'
+let g:netrw_dirhist_4='/home/jeff/.unison'
+let g:netrw_dirhist_5='/home/jeff/code/umbs072014/perls/src/iver/uwnav'
+let g:netrw_dirhist_6='/home/jeff/code/umbs072014/perls/src/iver/uwnav/iros-trials'
+let g:netrw_dirhist_7='/home/jeff/code/umbs072014/perls/src/iver/uwnav/icra-trials'
+let g:netrw_dirhist_8='/home/jeff/school/S14/icra2015-osm'
+let g:netrw_dirhist_9='/home/jeff/code/umbs072014/perls/src/iver/uwnav/icra-trials'

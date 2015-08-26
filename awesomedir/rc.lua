@@ -78,11 +78,11 @@ layouts =
 tags = {}
 for s = 1, screen.count() do
     if s == 1 then
-        tags[s] = awful.tag({ "[1] code", "[2] web", "[3] tex", "[4] docs", 5, 6, 7, 8, 9 },
+        tags[s] = awful.tag({ "[1] code", "[2] docs", "[3] web", "[4] tex", 5, 6, 7, 8, 9 },
                             s, 
                             {layouts[2], layouts[2], layouts[2], layouts[2], layouts[1], layouts[1], layouts[1], layouts[1], layouts[1]})
     elseif s == 2 then
-        tags[s] = awful.tag({ "[1] code", "[2] web", "[3] tex", "[4] docs", 5, 6, 7, 8, 9 },
+        tags[s] = awful.tag({ "[1] code", "[2] docs", "[3] web", "[4] tex", 5, 6, 7, 8, 9 },
                             s, 
                             {layouts[2], layouts[2], layouts[2], layouts[2], layouts[1], layouts[1], layouts[1], layouts[1], layouts[1]})
     else
@@ -275,9 +275,16 @@ globalkeys = awful.util.table.join(
     -- jmw bindings
     awful.key({ modkey, "Shift"}, "g", function () 
         awful.util.spawn("chromium-browser") end),
+    awful.key({ modkey, "Shift"}, "f", function () 
+        awful.util.spawn("firefox") end),
+
     awful.key({ }, "XF86AudioRaiseVolume", function () 
         awful.util.spawn("amixer -q sset Master 2+") end),
     awful.key({ }, "XF86AudioLowerVolume", function () 
+        awful.util.spawn("amixer -q sset Master 2-") end),
+    awful.key({ modkey, "Shift"}, "Up", function () 
+        awful.util.spawn("amixer -q sset Master 2+") end),
+    awful.key({ modkey, "Shift"}, "Down", function () 
         awful.util.spawn("amixer -q sset Master 2-") end),
     awful.key({ }, "XF86AudioMute", function () 
         awful.util.spawn("amixer -D pulse set Master 1+ toggle") end),
@@ -455,7 +462,7 @@ client.add_signal("manage", function (c, startup)
     if not startup then
         -- Set the windows at the slave,
         -- i.e. put it at the end of others instead of setting it master.
-        -- awful.client.setslave(c)
+        awful.client.setslave(c)
 
         -- Put windows in a smart way, only if they does not set an initial position.
         if not c.size_hints.user_position and not c.size_hints.program_position then

@@ -109,4 +109,11 @@ export LCM_DEFAULT_URL="udpm://239.255.76.67:7667?ttl=1"
 export LIBOVERLAY_SCROLLBAR=0
 
 # ipython notebook
-alias ipn='ipython notebook'
+alias ipn='ipython notebook --browser=chromium-browser'
+
+# gurobi
+export GUROBI_HOME="/opt/gurobi600/linux64"
+export PATH="${PATH}:${GUROBI_HOME}/bin"
+export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib"
+export GUROBI_LICENSE_FILE="~/code/third-party/proprietary/gurobi/gurobi.lic"
+

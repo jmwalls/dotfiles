@@ -41,7 +41,7 @@ set hlsearch
 set ignorecase
 
 " dont wrap words
-set textwidth=78
+set textwidth=80
 
 " history
 set history=50
@@ -57,6 +57,9 @@ set showcmd
 
 " show matching braces
 set showmatch
+
+" only one space after periods
+set nojoinspaces
 
 " write before hiding a buffer
 set autowrite
