@@ -5,21 +5,31 @@ import os
 
 ctags='ctags -R'
 
+dngv_tags = 'dngv-tags'
 perls_tags = 'perls-tags'
 perls_3rd = 'perls-3rd-party-tags'
 
 perls_src = '~/perls/src/'
-lcm_src = '~/perls/third-party/build/lcm-*'
-bot_src = '~/perls/third-party/build/libbot2'
-sam_src = '~/perls/third-party/build/isam_dev'
+dngv_src = '~/dngv/src/'
+
+lcm_src = '~/code/third-party/lcm-1.1.2/'
+bot_src = '~/code/third-party/libbot/'
+sam_src = '~/perls/third-party/build/isam_dev/'
 
 if __name__ == '__main__':
-    # generate perls tags
+    # generate dngv tags
     cmd = ' '.join ([ctags,
-        perls_src])
+        dngv_src])
     print 'executing:', cmd
     os.system (cmd)
-    os.rename ('tags', perls_tags)
+    os.rename ('tags', dngv_tags)
+
+    ## generate perls tags
+    #cmd = ' '.join ([ctags,
+    #    perls_src])
+    #print 'executing:', cmd
+    #os.system (cmd)
+    #os.rename ('tags', perls_tags)
 
     # generate perls third party tags
     cmd = ' '.join ([ctags,

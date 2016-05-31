@@ -109,7 +109,8 @@ export LCM_DEFAULT_URL="udpm://239.255.76.67:7667?ttl=1"
 export LIBOVERLAY_SCROLLBAR=0
 
 # ipython notebook
-alias ipn='ipython notebook --browser=chromium-browser'
+#alias ipn='ipython notebook --browser=chromium-browser'
+alias ipn='ipython notebook --browser=google-chrome'
 
 # gurobi
 export GUROBI_HOME="/opt/gurobi600/linux64"
@@ -117,3 +118,14 @@ export PATH="${PATH}:${GUROBI_HOME}/bin"
 export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib"
 export GUROBI_LICENSE_FILE="~/code/third-party/proprietary/gurobi/gurobi.lic"
 
+# ngv
+alias java='java -ea -server'
+export CLASSPATH=$CLASSPATH:/usr/share/java/gluegen-rt.jar:/usr/share/java/jogl.jar:/usr/local/share/java/lcm.jar:$HOME/code/third-party/april/java/april.jar:$HOME/dngv/java/dngv.jar:./
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/code/third-party/april/lib
+export VX_FONT_PATH=$HOME/dngv/data/vx_fonts
+export VX_SHADER_PATH=$HOME/dngv/src/libraries/vx/shaders
+alias gdbr='gdb -ex run --args'
+
+# hack for now, should probably be in .gitconfig
+git config --global diff.tool meld

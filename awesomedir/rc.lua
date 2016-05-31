@@ -441,6 +441,10 @@ awful.rules.rules = {
 
 -- {{{ Startup...
 
+-- network manager...
+--awful.util.spawn("nm-applet")
+os.execute("nm-applet &")
+
 awful.util.spawn_with_shell("xscreensaver -no-splash")
 
 --- }}}

@@ -93,6 +93,7 @@ set wildmenu
 " ctags locations
 set tags=./tags
 set tags+=~/.vim/tags/perls-tags
+set tags+=~/.vim/tags/dngv-tags
 set tags+=~/.vim/tags/perls-3rd-party-tags
 
 " ctags shortcuts

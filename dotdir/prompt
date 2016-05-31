@@ -48,18 +48,21 @@ PURPLE='\[\033[0;35m\]';        LIGHT_PURPLE='\[\033[1;35m\]';  BPURPLE='\[\033[
 CYAN='\[\033[0;36m\]';          LIGHT_CYAN='\[\033[1;36m\]';    BCYAN='\[\033[46m\]';
 LIGHT_GRAY='\[\033[0;37m\]';    WHITE='\[\033[1;37m\]';         BGRAY='\[\033[47m\]';
 
+# git branch
+GITBRANCH='\[\033[0;31m\]$(__git_ps1)\[\033[0m\]';
+
 # Are we an interactive shell?
 if [ "$PS1" ]; then
     #Set some prompts...
     if [ $CONN = lcl -a $USR = nopriv ] ; then   # local, user
         COLOR=$GREEN;
-        PS1="${COLOR}[${NO_COLOR}\u@\h:\W/${COLOR}]${NO_COLOR}\$ ";
+        PS1="${COLOR}[${NO_COLOR}\u@\h:\W/${COLOR}]${NO_COLOR}${GITBRANCH}\$ ";
     elif [ $CONN = lcl -a $USR = priv ] ; then   # local, root
         COLOR=$LIGHT_RED;
         PS1="${COLOR}[${NO_COLOR}\u@\h:\W/${COLOR}]${NO_COLOR}# ";
     elif [ $CONN = ssh -a $USR = nopriv ] ; then # ssh, user
         COLOR=$LIGHT_PURPLE;
-        PS1="${COLOR}[${NO_COLOR}\u@\h:\W/${COLOR}]${NO_COLOR}\$ ";
+        PS1="${COLOR}[${NO_COLOR}\u@\h:\W/${COLOR}]${NO_COLOR}${GITBRANCH}\$ ";
     elif [ $CONN = ssh -a $USR = priv ] ; then   # ssh, root
         COLOR=$LIGHT_RED;
         PS1="${COLOR}[${NO_COLOR}\u@\h:\W/${COLOR}]${NO_COLOR}# ";
