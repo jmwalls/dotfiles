@@ -119,6 +119,14 @@ vnoremap <silent> # :<C-U>
   \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
 
+" highlight trailing whitespace
+highlight ws ctermbg=red guibg=red
+match ws /\s\+$/
+autocmd BufWinEnter * match ws / \+$/
+
+" remove trailing whitespace with F5
+nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+
 " commands for opening NERDTree in horizontal/vertical split and new tab
 :command Se sp %:p:h
 :command Ve vs %:p:h
@@ -141,4 +149,3 @@ source $VIMRUNTIME/ftplugin/man.vim
 source $VIMRUNTIME/macros/matchit.vim
 
 autocmd BufEnter *.m compiler mlint
-

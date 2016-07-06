@@ -118,14 +118,29 @@ export PATH="${PATH}:${GUROBI_HOME}/bin"
 export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib"
 export GUROBI_LICENSE_FILE="~/code/third-party/proprietary/gurobi/gurobi.lic"
 
-# ngv
+# april
 alias java='java -ea -server'
-export CLASSPATH=$CLASSPATH:/usr/share/java/gluegen-rt.jar:/usr/share/java/jogl.jar:/usr/local/share/java/lcm.jar:$HOME/code/third-party/april/java/april.jar:$HOME/dngv/java/dngv.jar:./
+export CLASSPATH=$CLASSPATH:/usr/share/java/gluegen-rt.jar:/usr/share/java/jogl.jar:/usr/local/share/java/lcm.jar:./
 
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/code/third-party/april/lib
-export VX_FONT_PATH=$HOME/dngv/data/vx_fonts
-export VX_SHADER_PATH=$HOME/dngv/src/libraries/vx/shaders
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/april/lib
 alias gdbr='gdb -ex run --args'
 
 # hack for now, should probably be in .gitconfig
 git config --global diff.tool meld
+
+
+# trina env variables all the way down...
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/OpenNI2/Drivers/
+
+# Sets paths for autonomous driving softwares.
+export ROADRUNNER_HOME=$HOME/driving
+
+# Sets output file for  google perftools.
+export CPUPROFILE=profile.out
+
+# Sets debug option.
+ulimit -c unlimited
+
+# For AddresssSanitizer
+export ASAN_SYMBOLIZER_PATH=/usr/bin/llvm-symbolizer-3.5
+export ASAN_OPTIONS=symbolize=1:detect_leaks=1:detect_stack_use_after_return=1:abort_on_error=1
