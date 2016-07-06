@@ -53,5 +53,5 @@ if __name__ == '__main__':
         uninstall ()
     else:
         print_usage (sys.argv[0])
-   
+
     sys.exit (0)
