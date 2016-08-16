@@ -128,7 +128,6 @@ alias gdbr='gdb -ex run --args'
 # hack for now, should probably be in .gitconfig
 git config --global diff.tool meld
 
-
 # trina env variables all the way down...
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/OpenNI2/Drivers/
 

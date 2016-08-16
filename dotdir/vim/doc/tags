@@ -103,11 +103,17 @@ b:match_tail	matchit.txt	/*b:match_tail*
 b:match_wholeBR	matchit.txt	/*b:match_wholeBR*
 b:match_word	matchit.txt	/*b:match_word*
 b:match_words	matchit.txt	/*b:match_words*
+bold	orgguide.txt	/*bold*
 g%	matchit.txt	/*g%*
 g:org_agenda_files	orgguide.txt	/*g:org_agenda_files*
+g:org_export_emacs	orgguide.txt	/*g:org_export_emacs*
+g:org_export_init_script	orgguide.txt	/*g:org_export_init_script*
+g:org_export_verbose	orgguide.txt	/*g:org_export_verbose*
 g:org_heading_highlight_colors	orgguide.txt	/*g:org_heading_highlight_colors*
 g:org_heading_highlight_levels	orgguide.txt	/*g:org_heading_highlight_levels*
 g:org_heading_shade_leading_stars	orgguide.txt	/*g:org_heading_shade_leading_stars*
+g:org_indent	orgguide.txt	/*g:org_indent*
+g:org_plugins	orgguide.txt	/*g:org_plugins*
 g:org_todo_keyword_faces	orgguide.txt	/*g:org_todo_keyword_faces*
 g:org_todo_keywords	orgguide.txt	/*g:org_todo_keywords*
 matchit	matchit.txt	/*matchit*
@@ -158,7 +164,8 @@ orgguide-<LocalLeader>caT	orgguide.txt	/*orgguide-<LocalLeader>caT*
 orgguide-<LocalLeader>caa	orgguide.txt	/*orgguide-<LocalLeader>caa*
 orgguide-<LocalLeader>cat	orgguide.txt	/*orgguide-<LocalLeader>cat*
 orgguide-<LocalLeader>d	orgguide.txt	/*orgguide-<LocalLeader>d*
-orgguide-<LocalLeader>t	orgguide.txt	/*orgguide-<LocalLeader>t*
+orgguide-<LocalLeader>ft	orgguide.txt	/*orgguide-<LocalLeader>ft*
+orgguide-<LocalLeader>st	orgguide.txt	/*orgguide-<LocalLeader>st*
 orgguide-<[[	orgguide.txt	/*orgguide-<[[*
 orgguide->>	orgguide.txt	/*orgguide->>*
 orgguide->]]	orgguide.txt	/*orgguide->]]*
@@ -188,6 +195,7 @@ orgguide-docstructure	orgguide.txt	/*orgguide-docstructure*
 orgguide-export	orgguide.txt	/*orgguide-export*
 orgguide-gil	orgguide.txt	/*orgguide-gil*
 orgguide-hyperlinks	orgguide.txt	/*orgguide-hyperlinks*
+orgguide-installation	orgguide.txt	/*orgguide-installation*
 orgguide-introduction	orgguide.txt	/*orgguide-introduction*
 orgguide-license	orgguide.txt	/*orgguide-license*
 orgguide-linkformat	orgguide.txt	/*orgguide-linkformat*
@@ -199,6 +207,7 @@ orgguide-mobileorg	orgguide.txt	/*orgguide-mobileorg*
 orgguide-motion	orgguide.txt	/*orgguide-motion*
 orgguide-m{	orgguide.txt	/*orgguide-m{*
 orgguide-m}	orgguide.txt	/*orgguide-m}*
+orgguide-plain-list	orgguide.txt	/*orgguide-plain-list*
 orgguide-properties	orgguide.txt	/*orgguide-properties*
 orgguide-publishing	orgguide.txt	/*orgguide-publishing*
 orgguide-source	orgguide.txt	/*orgguide-source*
@@ -211,6 +220,8 @@ orgguide-toc	orgguide.txt	/*orgguide-toc*
 orgguide-todo	orgguide.txt	/*orgguide-todo*
 orgguide.txt	orgguide.txt	/*orgguide.txt*
 orgmode-<LocalLeader>-sa	orgguide.txt	/*orgmode-<LocalLeader>-sa*
+orgmode-<LocalLeader>pa	orgguide.txt	/*orgmode-<LocalLeader>pa*
+orgmode-<LocalLeader>pi	orgguide.txt	/*orgmode-<LocalLeader>pi*
 orgmode-<LocalLeader>si	orgguide.txt	/*orgmode-<LocalLeader>si*
 orgmode-ctrl-a	orgguide.txt	/*orgmode-ctrl-a*
 orgmode-ctrl-x	orgguide.txt	/*orgmode-ctrl-x*
