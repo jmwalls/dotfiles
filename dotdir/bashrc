@@ -93,10 +93,10 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-# source local prompt 
-if [ -f $HOME/.prompt ]; then 
-    . $HOME/.prompt 
-fi 
+# source local prompt
+if [ -f $HOME/.prompt ]; then
+    . $HOME/.prompt
+fi
 
 # set bash to vi mode
 set -o vi
@@ -143,3 +143,4 @@ ulimit -c unlimited
 # For AddresssSanitizer
 export ASAN_SYMBOLIZER_PATH=/usr/bin/llvm-symbolizer-3.5
 export ASAN_OPTIONS=symbolize=1:detect_leaks=1:detect_stack_use_after_return=1:abort_on_error=1
+

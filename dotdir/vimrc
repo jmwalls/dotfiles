@@ -149,3 +149,6 @@ source $VIMRUNTIME/ftplugin/man.vim
 source $VIMRUNTIME/macros/matchit.vim
 
 autocmd BufEnter *.m compiler mlint
+
+" org mode
+let g:org_agenda_files=['~/todo.org']
