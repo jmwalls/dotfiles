@@ -103,7 +103,8 @@ set -o vi
 
 # set lcm default url---port is decimal acomms abort code
 #export LCM_DEFAULT_URL=udpm://239.255.76.67:8191?ttl=0
-export LCM_DEFAULT_URL="udpm://239.255.76.67:7667?ttl=1"
+#export LCM_DEFAULT_URL="udpm://239.255.76.67:7667?ttl=1"
+export LCM_DEFAULT_URL="udpm://239.255.76.67:7667?ttl=0"
 
 # remove overlay bar
 export LIBOVERLAY_SCROLLBAR=0
