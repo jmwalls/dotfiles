@@ -1,3 +1,16 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" " set the runtime path to include Vundle and initialize
+" set rtp+=~/.vim/bundle/Vundle.vim
+" call vundle#begin()
+"
+" Plugin 'Valloric/YouCompleteMe'
+"
+" " All of your Plugins must be added before the following line
+" call vundle#end()            " required
+filetype plugin indent on    " required
+
 " Wrap too long lines
 set wrap
 
@@ -24,9 +37,6 @@ set wildchar=<Tab>
 "" }}}
 "set foldmethod=marker
 "set foldmethod=syntax
-
-" enable all features
-set nocompatible
 
 " powerful backspaces
 set backspace=indent,eol,start
@@ -148,7 +158,9 @@ source ~/.vim/ftplugin/python_match.vim
 source $VIMRUNTIME/ftplugin/man.vim
 source $VIMRUNTIME/macros/matchit.vim
 
-autocmd BufEnter *.m compiler mlint
+" YouCompleteMe -------------------------------- {{{
 
-" org mode
-let g:org_agenda_files=['~/todo.org']
+" let g:ycm_confirm_extra_conf = 0
+" nnoremap <Leader>h :YcmCompleter GoTo<CR>
+
+" }}}
