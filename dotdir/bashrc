@@ -129,11 +129,11 @@ alias gdbr='gdb -ex run --args'
 # hack for now, should probably be in .gitconfig
 git config --global diff.tool meld
 
-# trina env variables all the way down...
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/OpenNI2/Drivers/
-
-# Sets paths for autonomous driving softwares.
-export ROADRUNNER_HOME=$HOME/driving
+# Set tmux as default shel
+if command -v tmux>/dev/null && [ -z "$TMUX" ]; then
+    [[ $- != *i* ]] && return
+    exec tmux
+fi
 
 # Sets output file for  google perftools.
 export CPUPROFILE=profile.out
@@ -144,4 +144,19 @@ ulimit -c unlimited
 # For AddresssSanitizer
 export ASAN_SYMBOLIZER_PATH=/usr/bin/llvm-symbolizer-3.5
 export ASAN_OPTIONS=symbolize=1:detect_leaks=1:detect_stack_use_after_return=1:abort_on_error=1
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/jeff/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/jeff/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/jeff/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/jeff/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 

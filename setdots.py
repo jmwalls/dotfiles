@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import sys 
+import sys
 import os
 import shutil
 
@@ -15,7 +15,9 @@ dots = [f for f in os.listdir (DOTDIR)]
 
 def install ():
     print 'installing dot files:'
-    if not os.path.exists (OLDDIR): os.mkdir (OLDDIR)
+    if not os.path.exists (OLDDIR):
+        os.mkdir (OLDDIR)
+
     for dot in dots:
 	print '\t%s' % dot
 	src = os.path.join (DOTDIR, dot)
