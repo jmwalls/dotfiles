@@ -1,8 +1,8 @@
-##My dotfiles
+## Dotfiles
 -----
 
-Collection of configuration files.
+Collection of configuration files. To install, from this directory run:
 
-To install, from this directory run:  
-
+```
 $ ./setdots.py install
+```
